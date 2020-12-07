@@ -1,5 +1,4 @@
-import { countTrueInArray } from "../helpers";
-import { loadFileByLineAndApply } from "../loadFile";
+import { loadFileByLineAndApply } from "../utilities";
 
 type TreeOrNot = "#" | ".";
 type Pattern = TreeOrNot[][];

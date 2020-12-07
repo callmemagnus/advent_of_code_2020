@@ -1,5 +1,4 @@
-import { loadFileByLineAndApply } from "../loadFile";
-import { print, run, title } from "../utilities";
+import { println, run, title, loadFileByLineAndApply } from "../utilities";
 
 function load(filename: string) {
   return loadFileByLineAndApply(filename, (line: string) => {
@@ -30,13 +29,13 @@ run(__dirname, (filename) => {
 
   title("One", 1);
 
-  print("highest", max);
+  println("highest", max);
 
   if (/data/.test(filename)) {
     title("Two", 1);
     for (let i = min; i < max - 1; i++) {
       if (!seats.includes(i)) {
-        print("my seat", i);
+        println("my seat", i);
       }
     }
   }

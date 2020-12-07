@@ -1,4 +1,4 @@
-import { loadFileBlockSeparatedByEmptyLines } from "../loadFile";
+import { loadFileBlockSeparatedByAnEmptyLine } from "../loadFile";
 
 interface PassportData {
   byr?: string;
@@ -97,7 +97,7 @@ class Passport implements IPassport {
 }
 
 function load(filename: string): IPassport[] {
-  const lines = loadFileBlockSeparatedByEmptyLines(filename);
+  const lines = loadFileBlockSeparatedByAnEmptyLine(filename);
 
   const passports = lines.map((line) => {
     const pairs = line.split(" ");

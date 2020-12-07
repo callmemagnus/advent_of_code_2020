@@ -1,4 +1,4 @@
-import { loadFileByLineAndApply } from "../loadFile";
+import { loadFileByLineAndApply } from "../utilities";
 
 function findTwoSum2020(filename: string) {
   const numbers = loadFileByLineAndApply(filename, (item) =>

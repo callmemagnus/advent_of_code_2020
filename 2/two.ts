@@ -1,5 +1,4 @@
-import { countTrueInArray } from "../helpers";
-import { loadFileByLineAndApply } from "../loadFile";
+import { loadFileByLineAndApply, countTrueInArray } from "../utilities";
 
 interface Line {
   min: number;

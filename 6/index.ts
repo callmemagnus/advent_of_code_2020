@@ -1,11 +1,15 @@
-import { loadFileBlockSeparatedByAnEmptyLine } from "../loadFile";
-import { print, run, title } from "../utilities";
+import {
+  println,
+  run,
+  title,
+  loadFileBlockSeparatedByAnEmptyLine,
+} from "../utilities";
 
 run(__dirname, (filename) => {
   const groups = loadFileBlockSeparatedByAnEmptyLine(filename);
 
   title("One", 1);
-  print(
+  println(
     groups
       .map((line) => {
         return new Set(line.replace(/ /g, "").split(""));
@@ -13,7 +17,7 @@ run(__dirname, (filename) => {
       .reduce((acc, group: Set<string>) => acc + group.size, 0)
   );
   title("Two", 1);
-  print(
+  println(
     groups
       .map((line) => {
         const persons = line.split(" ");
