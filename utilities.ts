@@ -64,3 +64,25 @@ export function println(...params: any[]) {
 export function countTrueInArray(arr: boolean[]): number {
   return arr.reduce((acc: number, bool: boolean) => (bool ? acc + 1 : acc), 0);
 }
+
+export const pgdc = (x: number, y: number) => {
+  let a = x;
+  let b = y;
+  if (y > x) {
+    a = y;
+    b = x;
+  }
+  let noResult = true;
+  while (noResult) {
+    const r = a % b;
+    if (r === 0) {
+      noResult = false;
+    } else {
+      a = b;
+      b = r;
+    }
+  }
+  return b;
+};
+
+export const ppmc = (a: number, b: number) => Math.abs(a * b) / pgdc(a, b);
